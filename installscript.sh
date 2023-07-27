@@ -26,8 +26,10 @@ sudo pacman -Syu --noconfirm
 # Install paru AUR helper
 sudo pacman -S --noconfirm --needed base-devel git
 (cd /tmp && git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si)
+echo "paru installed"
 
-# copy sources from git
+# copy sources with git
+echo "copy sources from git repos"
 git clone https://gitlab.com/stephan-raabe/dotfiles.git ~/dotfiles/
 git clone https://github.com/tonybeyond/nixos_config.git ~/dotfiles/fish
 git clone https://github.com/tonybeyond/nvim.git ~/dotfiles/mynvim
@@ -40,9 +42,9 @@ git clone https://github.com/thelinuxfraud/qtile.git ~/dotfiles/polybar_git2
 echo ""
 echo "-> Install main packages"
 
-packagesPacman=("nodejs" "neofetch" "tmux" "preload" "ly" "exa" "ranger" "fish" "open-vm-tools" "alacritty" "scrot" "nitrogen" "picom" "starship" "slock" "neovim" "rofi" "dunst" "ueberzug" "mpv" "xfce4-power-manager" "python-pip" "thunar" "mousepad" "ttf-font-awesome" "ttf-fira-sans" "ttf-fira-code" "ttf-firacode-nerd" "figlet" "cmatrix" "lxappearance" "polybar" "breeze" "breeze-gtk" "rofi-calc" "vlc" "python-psutil" "python-rich" "python-click");
+packagesPacman=("nodejs" "qtile" "neofetch" "tmux" "exa" "ranger" "fish" "open-vm-tools" "alacritty" "scrot" "nitrogen" "picom" "starship" "slock" "neovim" "rofi" "dunst" "ueberzug" "mpv" "xfce4-power-manager" "python-pip" "thunar" "mousepad" "ttf-font-awesome" "ttf-fira-sans" "ttf-fira-code" "ttf-firacode-nerd" "figlet" "cmatrix" "lxappearance" "polybar" "breeze" "breeze-gtk" "rofi-calc" "vlc" "python-psutil" "python-rich" "python-click");
 
-packagesParu=("brave-bin" "pfetch" "bibata-cursor-theme" "shell-color-scripts");
+packagesParu=("brave-bin" "pfetch" "bibata-cursor-theme" "shell-color-scripts" "preload");
     
 # ------------------------------------------------------
 # Function: Is package installed
@@ -131,7 +133,6 @@ fi
 # Enable services
 # ------------------------------------------------------
 sudo systemctl enable preload
-sudo systemctl enable ly
 
 # ------------------------------------------------------
 # Create .config folder
@@ -180,7 +181,7 @@ _installSymLink ~/.config/rofi ~/dotfiles/rofi/ ~/.config
 _installSymLink ~/.config/nvim ~/dotfiles/nvim/ ~/.config
 _installSymLink ~/.config/polybar ~/dotfiles/polybar/ ~/.config
 _installSymLink ~/.config/dunst ~/dotfiles/dunst/ ~/.config
-_installSymLink ~/.config/dunst ~/dotfiles/fish/ ~/.config
+_installSymLink ~/.config/fish ~/dotfiles/fish/ ~/.config
 _installSymLink ~/.config/starship.toml ~/dotfiles/starship/starship.toml ~/.config/starship.toml
 
 # ------------------------------------------------------
