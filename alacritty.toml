@@ -1,0 +1,88 @@
+[window]
+padding = { x = 10, y = 10 }
+dynamic_padding = true
+opacity = 0.96
+
+[font]
+normal = { family = "IBM Plex Mono", style = "Medium" }
+bold = { family = "IBM Plex Mono", style = "Bold" }
+italic = { family = "IBM Plex Mono", style = "Italic" }
+size = 10.0
+
+[selection]
+save_to_clipboard = true
+
+[cursor]
+style = { shape = "Beam", blinking = "Off" }
+
+[colors.primary]
+background = "#1a1b26"
+foreground = "#c0caf5"
+dim_foreground = "#a9b1d6"
+bright_foreground = "#c0caf5"
+
+[colors.cursor]
+text = "#1a1b26"
+cursor = "#7aa2f7"
+
+[colors.vi_mode_cursor]
+text = "#1a1b26"
+cursor = "#bb9af7"
+
+[colors.search.matches]
+foreground = "#1a1b26"
+background = "#e0af68"
+
+[colors.search.focused_match]
+foreground = "#1a1b26"
+background = "#7aa2f7"
+
+[colors.footer_bar]
+foreground = "#c0caf5"
+background = "#24283b"
+
+[colors.hints.start]
+foreground = "#1a1b26"
+background = "#e0af68"
+
+[colors.hints.end]
+foreground = "#c0caf5"
+background = "#414868"
+
+[colors.line_indicator]
+foreground = "None"
+background = "None"
+
+[colors.selection]
+text = "#c0caf5"
+background = "#283457"
+
+[colors.normal]
+black = "#15161e"
+red = "#f7768e"
+green = "#9ece6a"
+yellow = "#e0af68"
+blue = "#7aa2f7"
+magenta = "#bb9af7"
+cyan = "#7dcfff"
+white = "#a9b1d6"
+
+[colors.bright]
+black = "#414868"
+red = "#f7768e"
+green = "#9ece6a"
+yellow = "#e0af68"
+blue = "#7aa2f7"
+magenta = "#bb9af7"
+cyan = "#7dcfff"
+white = "#c0caf5"
+
+[colors.dim]
+black = "#0f0f14"
+red = "#db4b4b"
+green = "#8ebd6b"
+yellow = "#c0a36e"
+blue = "#6d8ddb"
+magenta = "#9d7cd8"
+cyan = "#6fb9d6"
+white = "#8a91b2"
